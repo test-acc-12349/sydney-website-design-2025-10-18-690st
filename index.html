@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sydney Website Design - Premium web design services. Fast, SEO-ready websites with high conversion rates. Low cost, easy to update, free hosting.">
+    <meta name="keywords" content="website design, Sydney, web design, SEO, fast websites, CTA">
+    <meta name="author" content="Sydney Website Design">
+    <meta property="og:title" content="Sydney Website Design - Best Websites">
+    <meta property="og:description" content="Premium web design services with fast, SEO-ready websites and high conversion rates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swd.com">
+    <title>Sydney Website Design - Best Websites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.2);
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .accordion-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .accordion-button.active {
+            color: #667eea;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.05) 100%);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.4);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .nav-link:hover {
+            color: #667eea;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-95 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="feature-icon w-10 h-10">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">SWD</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Features</a>
+                    <a href="#benefits" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Benefits</a>
+                    <a href="#faq" class="nav-link text-gray-300 hover:text-white text-sm font-medium">FAQ</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+                    <a href="https://swd.com" target="_blank" rel="noopener noreferrer" class="cta-button px-6 py-2 rounded-lg text-white font-semibold text-sm">
+                        Get Started
+                    </a>
+                </div>
+                
+                <button class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center space-y-8">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+                    Sydney Website Design
+                </h1>
+                <p class="text-xl sm:text-2xl md:text-3xl gradient-text font-bold">
+                    Best Websites
+                </p>
+                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Create stunning, high-performance websites that convert. Fast, SEO-ready, and built for results. Low cost, easy to update, with free hosting included.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                    <a href="https://swd.com" target="_blank" rel="noopener noreferrer" class="cta-button px-8 py-4 rounded-lg text-white font-bold text-lg w-full sm:w-auto">
+                        Start Your Project
+                    </a>
+                    <a href="#contact" class="px-8 py-4 rounded-lg border-2 border-gray-700 text-white font-bold text-lg hover:border-purple-500 hover:text-purple-400 smooth-transition w-full sm:w-auto">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Powerful Features</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Everything you need to create a website that stands out and performs exceptionally.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Fast -->
+                <div class="hover-lift smooth-transition bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl p-8 space-y-4">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">Lightning Fast</h3>
+                    <p class="text-gray-400 leading-relaxed">Optimized performance ensures your website loads in milliseconds, keeping visitors engaged and improving your search rankings.</p>
+                </div>
+                
+                <!-- Feature 2: SEO Ready -->
+                <div class="hover-lift smooth-transition bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl p-8 space-y-4">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">SEO Ready</h3>
+                    <p class="text-gray-400 leading-relaxed">Built with SEO best practices from the ground up. Rank higher on Google and attract more organic traffic to your business.</p>
+                </div>
+                
+                <!-- Feature 3: High CTA -->
+                <div class="hover-lift smooth-transition bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl p-8 space-y-4">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-2.16-2.66c-.23-.29-.62-.29-.85 0-.23.29-.23.77 0 1.06l2.5 3.1c.23.29.62.29.85 0l3.54-4.6c.23-.29.23-.77 0-1.06-.23-.29-.62-.29-.85 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">High Conversion</h3>
+                    <p class="text-gray-400 leading-relaxed">Strategic design and placement of call-to-action elements maximize conversions and turn visitors into paying customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Why Choose Us</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Affordable, flexible, and hassle-free web solutions for your business.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1: Low Cost -->
+                <div class="card-hover smooth-transition bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl p-8 space-y-4">
+                    <div class="feature-icon w-16 h-16">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold">Low Cost</h3>
+                    <p class="text-gray-400 leading-relaxed">Premium web design without the premium price tag. We deliver exceptional value and ROI for every project.</p>
+                    <ul class="space-y-2 pt-4">
+                        <li class="flex items-center space-x-2 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Transparent pricing</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>No hidden fees</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Benefit 2: Easy to Update -->
+                <div class="card-hover smooth-transition bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl p-8 space-y-4">
+                    <div class="feature-icon w-16 h-16">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold">Easy to Update</h3>
+                    <p class="text-gray-400 leading-relaxed">Manage your content with ease. Our intuitive interface makes updates simple, even if you're not tech-savvy.</p>
+                    <ul class="space-y-2 pt-4">
+                        <li class="flex items-center space-x-2 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>User-friendly CMS</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>24/7 access</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Benefit 3: Free Hosting -->
+                <div class="card-hover smooth-transition bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl p-8 space-y-4">
+                    <div class="feature-icon w-16 h-16">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold">Free Hosting</h3>
+                    <p class="text-gray-400 leading-relaxed">Reliable hosting included in your package. No additional costs, no surprises, just peace of mind.</p>
+                    <ul class="space-y-2 pt-4">
+                        <li class="flex items-center space-x-2 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>99.9% uptime</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>SSL certificate</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop" alt="Modern workspace" class="w-full h-full object-cover opacity-20"/>
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 text-center space-y-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                Ready to Transform Your Online Presence?
+            </h2>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Join hundreds of businesses that have already elevated their web presence with our award-winning design and development services.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                <a href="https://swd.com" target="_blank" rel="noopener noreferrer" class="cta-button px-8 py-4 rounded-lg text-white font-bold text-lg w-full sm:w-auto">
+                    Get Your Website Today
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-lg border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-gray-900 smooth-transition w-full sm:w-auto">
+                    Schedule a Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-400 text-lg">Find answers to common questions about our services and process.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl overflow-hidden">
+                    <button class="accordion-button w-full px-6 py-4 text-left font-semibold text-lg flex justify-between items-center hover:bg-gray-700 hover:bg-opacity-50" onclick="toggleAccordion(this)">
+                        <span>How long does it take to build a website?</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-4 text-gray-400 leading-relaxed">
+                        <p>Most projects are completed within 2-4 weeks, depending on complexity and scope. We'll provide a detailed timeline during the initial consultation.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl overflow-hidden">
+                    <button class="accordion-button w-full px-6 py-4 text-left font-semibold text-lg flex justify-between items-center hover:bg-gray-700 hover:bg-opacity-50" onclick="toggleAccordion(this)">
+                        <span>Do you provide ongoing support?</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-4 text-gray-400 leading-relaxed">
+                        <p>Yes! We offer comprehensive support packages including maintenance, updates, and technical assistance. Contact us to discuss your specific needs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl overflow-hidden">
+                    <button class="accordion-button w-full px-6 py-4 text-left font-semibold text-lg flex justify-between items-center hover:bg-gray-700 hover:bg-opacity-50" onclick="toggleAccordion(this)">
+                        <span>Is my website mobile-responsive?</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-4 text-gray-400 leading-relaxed">
+                        <p>Absolutely! All our websites are fully responsive and optimized for mobile, tablet, and desktop devices. We test across all major browsers and devices.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl overflow-hidden">
+                    <button class="accordion-button w-full px-6 py-4 text-left font-semibold text-lg flex justify-between items-center hover:bg-gray-700 hover:bg-opacity-50" onclick="toggleAccordion(this)">
+                        <span>Can you help with SEO?</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-4 text-gray-400 leading-relaxed">
+                        <p>Yes! SEO is built into every website we create. We also offer specialized SEO services to help you rank higher on search engines and drive organic traffic.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl overflow-hidden">
+                    <button class="accordion-button w-full px-6 py-4 text-left font-semibold text-lg flex justify-between items
